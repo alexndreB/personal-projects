@@ -1,2 +1,2 @@
 # personal-projects
-my personal project. enjoyy &lt;3
+my personal projects. enjoyy &lt;3
