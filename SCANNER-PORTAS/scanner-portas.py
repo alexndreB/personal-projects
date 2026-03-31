@@ -1,4 +1,5 @@
 import socket
+import sys
 
 def scan_port(host, port):
     try:
@@ -10,7 +11,13 @@ def scan_port(host, port):
         sock.close()
     except:
         pass
-    
-host = "192.168.1.8"
+
+if len(sys.argv) < 2:
+    print("uso: python scanner.py <host>")
+    print("exemplo: python scanner.py 192.168.1.8")
+    sys.exit(1)
+
+host = sys.argv[1]
+
 for port in [22, 80, 443]:
     scan_port(host, port)
